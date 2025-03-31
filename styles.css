@@ -95,10 +95,17 @@ body {
     width: 80%;
     margin: 20px auto;
 }
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
 
 .carousel img {
-    width: 100%;
-    display: none;
+    width: 24%;
+    height: auto;
 }
 
 .carousel img.active {
