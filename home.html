@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEUTHERIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function atualizarContagem() {
+            const eventoData = new Date("2025-06-20T19:00:00").getTime();
+            const agora = new Date().getTime();
+            const diferenca = eventoData - agora;
+
+            if (diferenca < 0) {
+                document.getElementById("dias").innerText = "0";
+                document.getElementById("horas").innerText = "0";
+                document.getElementById("minutos").innerText = "0";
+                document.getElementById("segundos").innerText = "0";
+                return;
+            }
+
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            document.getElementById("dias").innerText = dias;
+            document.getElementById("horas").innerText = horas;
+            document.getElementById("minutos").innerText = minutos;
+            document.getElementById("segundos").innerText = segundos;
+        }
+
+        setInterval(atualizarContagem, 1000);
+
+        function iniciarCarrossel() {
+            let index = 0;
+            const imagens = document.querySelectorAll(".carousel img");
+            imagens[index].classList.add("active");
+
+            setInterval(() => {
+                imagens[index].classList.remove("active");
+                index = (index + 1) % imagens.length;
+                imagens[index].classList.add("active");
+            }, 3000);
+        }
+        
+        window.onload = iniciarCarrossel;
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" height="30">
+        <div>
+            <a href="#sobre">SOBRE</a>
+            <a href="#fotos">FOTOS</a>
+            <a href="#local">LOCAL</a>
+        </div>
+        <button class="inscricao-button" onclick="window.location.href='formulario.html'">INSCRIÇÕES</button>
+    </div>
+    <div class="hero">
+        <h1>ELEUTHERIA 2025</h1>
+        <p>De <strong>20 a 22</strong> de Junho de 2025</p>
+        <button class="botao-inscricao">INSCRIÇÕES ABERTAS</button>
+    </div>
+    <div class="countdown">
+        <div>
+            <span id="dias">0</span>
+            Dias
+        </div>
+        <div>
+            <span id="horas">0</span>
+            Horas
+        </div>
+        <div>
+            <span id="minutos">0</span>
+            Min
+        </div>
+        <div>
+            <span id="segundos">0</span>
+            Seg
+        </div>
+    </div>
+    <div class="sobre" id="sobre">
+        <h2>Sobre</h2>
+        <div class="underline"></div>
+    </div>
+    <div class="carousel">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+        <img src="foto4.jpg" alt="Foto 4">
+    </div>
+    <div class="map-container" id="local">
+        <iframe src="https://www.google.com/maps/embed?v=3&hl=pt-BR" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <a href="https://wa.me/seunumerodetelefone" class="contact-button">Falar com o Organizador</a>
+    <div class="footer">
+        &copy; 2025 Global Leadership Summit. Todos os direitos reservados.
+    </div>
+</body>
+</html>

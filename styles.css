@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1b2a;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.inscricao-button {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+}
+
+.hero {
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.botao-inscricao {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: not-allowed;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    background-color: #0a0e17;
+    padding: 20px 0;
+}
+
+.countdown div {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.countdown span {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.sobre {
+    background-color: #eee1d5;
+    padding: 50px 20px;
+    color: black;
+}
+
+.sobre h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.underline {
+    width: 50px;
+    height: 3px;
+    background-color: #c2185b;
+    margin: 10px auto;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.map-container {
+    margin: 20px auto;
+    width: 80%;
+    height: 400px;
+}
+
+.contact-button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #25d366;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.footer {
+    background-color: #222;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
