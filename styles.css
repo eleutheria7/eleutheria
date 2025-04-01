@@ -60,6 +60,17 @@ body {
     font-size: 1.2em;
 }
 
+.botao-inscricao {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+}
+
 /* Seção de Testemunhos */
 .testemunhos {
     background-color: #f5f5f5;
@@ -162,7 +173,6 @@ body {
     font-weight: bold;
 }
 
-
 /* Carousel */
 .carousel {
     position: relative;
@@ -205,7 +215,7 @@ body {
     margin: 15px auto;
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #c71f1f;
+    background-color: #23cf3a;
     color: white;
     font-weight: bold;
     text-decoration: none;
