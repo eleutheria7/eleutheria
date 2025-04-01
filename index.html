@@ -5,47 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELEUTHERIA</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function atualizarContagem() {
-            const eventoData = new Date("2025-06-20T19:00:00").getTime();
-            const agora = new Date().getTime();
-            const diferenca = eventoData - agora;
-
-            if (diferenca < 0) {
-                document.getElementById("dias").innerText = "0";
-                document.getElementById("horas").innerText = "0";
-                document.getElementById("minutos").innerText = "0";
-                document.getElementById("segundos").innerText = "0";
-                return;
-            }
-
-            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-
-            document.getElementById("dias").innerText = dias;
-            document.getElementById("horas").innerText = horas;
-            document.getElementById("minutos").innerText = minutos;
-            document.getElementById("segundos").innerText = segundos;
-        }
-
-        setInterval(atualizarContagem, 1000);
-
-        function iniciarCarrossel() {
-            let index = 0;
-            const imagens = document.querySelectorAll(".carousel img");
-            imagens[index].classList.add("active");
-
-            setInterval(() => {
-                imagens[index].classList.remove("active");
-                index = (index + 1) % imagens.length;
-                imagens[index].classList.add("active");
-            }, 3000);
-        }
-        
-        window.onload = iniciarCarrossel;
-    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
 </head>
 <body>
     <div class="navbar">
@@ -83,19 +43,29 @@
     </div>
     <div class="sobre" id="sobre">
         <div class="container">
-            <h2>Sobre</h2>
+            <h2>Sobre Nós</h2>
             <p><strong>Eleutheria: Um Retiro Católico para Jovens</strong></p>
     
             <p>O Eleutheria é um retiro católico organizado pela juventude da Paróquia Santa Luzia de Hortolândia/SP, destinado a jovens de 14 a 30 anos.</p>
     
             <h3>O que você pode esperar?</h3>
-            <ul>
-                <li>Desenvolver uma relação mais profunda com Deus</li>
-                <li>Se abster das preocupações cotidianas</li>
-                <li>Descobrir o sentido da sua vida</li>
-                <li>Encontrar a verdadeira alegria</li>
-                <li>Compartilhar experiências com outros jovens</li>
-            </ul>
+            <div class="expectativas">
+                <div class="item">
+                    <p>Desenvolver uma relação mais profunda com Deus</p>
+                </div>
+                <div class="item">
+                    <p>Se abster das preocupações cotidianas</p>
+                </div>
+                <div class="item">
+                    <p>Descobrir o sentido da sua vida</p>
+                </div>
+                <div class="item">
+                    <p>Encontrar a verdadeira alegria</p>
+                </div>
+                <div class="item">
+                    <p>Compartilhar experiências com outros jovens</p>
+                </div>
+            </div>
     
             <p><strong>Um momento único para você</strong></p>
             <p>O Eleutheria é um momento único para você ter um encontro genuíno com a bondade e a misericórdia de Deus. Se você está procurando por um momento de reflexão, oração e encontro com Deus, o Eleutheria é o lugar certo para você!</p>
@@ -108,27 +78,67 @@
             <div class="underline"></div>
         </div>
     </div>
+    
     <div class="video-container">
         <h3>Eis-Me Aqui</h3>
         <p>Canção de Comunidade Católica Colo de Deus</p>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/M4-_U2wbLXY" title="Eis me aqui - Colo de Deus | Letra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    <br>
     <h3>Fotos do Eleutheria 2024</h3>
-    <div class="carousel">
-        <div class="carousel-container">
-        <img src="./fotos/Imagem1.jpg" alt="Foto 1">
-        <img src="./fotos/Imagem2.jpg" alt="Foto 2">
-        <img src="./fotos/Imagem3.jpg" alt="Foto 3">
-        <img src="./fotos/Imagem4.jpg" alt="Foto 4">
+    <div class="carousel" id="fotos">
+        <div class="carousel-container" id="carousel-container">
+            <img src="./fotos/Imagem1.jpg" alt="Foto 1">
+            <img src="./fotos/Imagem2.jpg" alt="Foto 2">
+            <img src="./fotos/Imagem3.jpg" alt="Foto 3">
+            <img src="./fotos/Imagem4.jpg" alt="Foto 4">
+            <img src="./fotos/Imagem5.jpg" alt="Foto 5">
+            <img src="./fotos/Imagem6.jpg" alt="Foto 6">
+            <img src="./fotos/Imagem7.jpg" alt="Foto 7">
+            <img src="./fotos/Imagem8.jpg" alt="Foto 8">
+            <img src="./fotos/Imagem9.jpg" alt="Foto 9">
+            <img src="./fotos/Imagem10.jpg" alt="Foto 10">
+            <img src="./fotos/Imagem11.jpg" alt="Foto 11">
+            <img src="./fotos/Imagem12.jpg" alt="Foto 12">
+            <img src="./fotos/Imagem13.jpg" alt="Foto 13">
+            <img src="./fotos/Imagem14.jpg" alt="Foto 14">
+            <img src="./fotos/Imagem15.jpg" alt="Foto 15">
+            <img src="./fotos/Imagem16.jpg" alt="Foto 16">
+            <img src="./fotos/Imagem17.jpg" alt="Foto 17">
+            <img src="./fotos/Imagem18.jpg" alt="Foto 18">
+            <img src="./fotos/Imagem19.jpg" alt="Foto 19">
+            <img src="./fotos/Imagem20.jpg" alt="Foto 20">
+            <img src="./fotos/Imagem21.jpg" alt="Foto 21">
+            <img src="./fotos/Imagem22.jpg" alt="Foto 22">
+            <img src="./fotos/Imagem23.jpg" alt="Foto 23">
+            <img src="./fotos/Imagem24.jpg" alt="Foto 24">
+            <img src="./fotos/Imagem25.jpg" alt="Foto 25">
+            <img src="./fotos/Imagem26.jpg" alt="Foto 26"> 
+            <img src="./fotos/Imagem27.jpg" alt="Foto 27">
+            <img src="./fotos/Imagem28.jpg" alt="Foto 28">    
+        </div>
     </div>
-    </div>
+    <br>
     <h3>Local: Centro de Formação Religioso – Luiza G. Freguglia</h3>
     <div class="map-container" id="local">
-        <iframe src="https://www.google.com/maps/embed?v=3&hl=pt-BR" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d459.6789342124309!2d-47.4856583!3d-22.8235209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c620e16ce44f5f%3A0xa87cd1be60590d50!2sCapela%20de%20Santo%20Antonio!5e0!3m2!1spt-BR!2sbr!4v1743472401460!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <a href="https://wa.me/seunumerodotelefone" class="contact-button">Falar com o Organizador</a>
+    <a href="https://wa.me/19981097482" class="contact-button">Falar com o Organizador</a>
     <div class="footer">
-        &copy; 2025 Global Leadership Summit. Todos os direitos reservados.
+        <p>&copy; "Uma juventude transfigurada (abrasada) pelo Sagrado Coração de Jesus"</p>
+        
+        <div class="social-icons">
+            <a href="https://wa.me/19981097482" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/SantaLuziaHortolandia/?locale=pt_BR" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/jc.santaluzia/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
