@@ -187,16 +187,18 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
-        width: 95%;
+        width: 90%; /* Aumenta a largura da container no mobile */
+        padding: 10px;
     }
 
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Organiza os itens da navbar em coluna */
+        align-items: center; /* Centraliza os itens */
+        padding: 10px 0; /* Ajusta o padding */
     }
 
     .navbar a {
-        margin: 10px 0;
+        margin: 5px 0; /* Reduz a margem entre os links */
     }
 
     .hero {
@@ -204,7 +206,7 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5em;
+        font-size: 2.5em; /* Ajusta o tamanho do título no mobile */
     }
 
     .hero p {
@@ -215,8 +217,12 @@ body {
         padding: 12px 25px;
     }
 
+    .countdown {
+        flex-direction: column;
+    }
+
     .countdown div {
-        margin: 0 5px;
+        margin: 5px 0;
     }
 
     .countdown span {
@@ -228,39 +234,40 @@ body {
     }
 
     .carousel-container img {
-        width: 80%;
+        width: 80%; /* Ajusta a largura da imagem do carousel */
         margin-bottom: 15px;
     }
 
     .map-container {
-        width: 90%;
+        width: 100%; /* Ajusta o mapa para usar toda a largura disponível */
         height: 300px;
     }
 
     .contact-button {
-        width: 80%;
+        width: 80%; /* Aumenta o botão de contato */
         padding: 12px 20px;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction: column; /* Organiza os itens do rodapé em coluna */
         text-align: center;
-        padding: 15px;
+        padding: 15px 0;
     }
 
     .social-icons {
-        position: static;
+        position: static; /* Ajusta o posicionamento dos ícones no mobile */
         margin-top: 10px;
+        gap: 15px; /* Ajusta o espaçamento entre os ícones */
     }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2em;
+        font-size: 2em; /* Ajusta o tamanho do título no mobile */
     }
 
     .hero p {
-        font-size: 0.9em;
+        font-size: 0.9em; /* Ajusta o tamanho do texto */
     }
 
     .botao-inscricao {
