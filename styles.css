@@ -8,12 +8,13 @@ body {
 }
 
 .container {
-    width: 80%; /* Limita a largura para 80% da largura da tela */
-    max-width: 1000px; /* Define uma largura máxima para o container */
-    margin: 0 auto; /* Centraliza o container na página */
-    padding: 20px; /* Adiciona um espaço interno */
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -37,6 +38,7 @@ body {
     cursor: pointer;
 }
 
+/* Hero */
 .hero {
     padding: 100px 20px;
 }
@@ -61,6 +63,7 @@ body {
     cursor: pointer;
 }
 
+/* Contagem regressiva */
 .countdown {
     display: flex;
     justify-content: center;
@@ -79,6 +82,7 @@ body {
     font-weight: bold;
 }
 
+/* Seção Sobre */
 .sobre {
     background-color: #eee1d5;
     padding: 50px 20px;
@@ -97,6 +101,7 @@ body {
     margin: 10px auto;
 }
 
+/* Carousel */
 .carousel {
     position: relative;
     width: 100%;
@@ -107,92 +112,87 @@ body {
 
 .carousel-container {
     display: flex;
-    transition: transform 1s ease-in-out; /* Adiciona a transição suave */
+    transition: transform 1s ease-in-out;
 }
 
 .carousel-container img {
     width: 25%;
     height: auto;
-    flex-shrink: 0; /* Impede as imagens de encolher */
+    flex-shrink: 0;
 }
 
+/* Mapa */
 .map-container {
-    width: 90vw; /* Ocupa 90% da largura da tela */
-    max-width: 1200px; /* Define uma largura máxima para evitar que fique muito grande em telas grandes */
-    height: 400px; /* Define uma altura fixa */
-    margin: 20px auto; /* Centraliza horizontalmente */
-    border-radius: 8px; /* Borda arredondada para um visual mais moderno (opcional) */
-    overflow: hidden; /* Garante que o conteúdo respeite o border-radius */
+    width: 90vw;
+    max-width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .map-container iframe {
     width: 100%;
     height: 100%;
-    border: none; /* Remove a borda do iframe */
+    border: none;
 }
+
+/* Botão de contato */
 .contact-button {
-    display: inline-block; /* Mantém o botão mais compacto */
-    margin: 15px auto; /* Ajusta a margem */
-    padding: 10px 20px; /* Reduz o preenchimento interno */
-    font-size: 14px; /* Diminui o tamanho do texto */
+    display: inline-block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    font-size: 14px;
     background-color: #25d366;
     color: white;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 20px; /* Mantém o design arredondado */
+    border-radius: 20px;
 }
 
+/* Rodapé */
 .footer {
     background-color: #222;
     padding: 20px;
     color: white;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }
-.footer p{
+
+.footer p {
     margin: 0;
     text-align: center;
     flex-grow: 1;
 }
+
 .social-icons {
     display: flex;
-    gap: 20px; /* Espaçamento entre os ícones */
+    gap: 20px;
     position: absolute;
     right: 20px;
 }
 
 .social-icon {
-    font-size: 24px; /* Tamanho do ícone */
+    font-size: 24px;
     color: white;
     text-decoration: none;
 }
 
 .social-icon:hover {
-    color: #25d366; /* Cor ao passar o mouse (Whatsapp) */
+    color: #25d366;
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .social-icons {
-        gap: 15px;
-    }
-
-    .social-icon {
-        font-size: 20px; /* Reduz o tamanho do ícone em telas menores */
-    }
-
 /* Responsividade */
-
 @media (max-width: 768px) {
     .container {
-        width: 95%; /* Usa 95% da largura em telas menores */
+        width: 95%;
     }
 
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .navbar a {
@@ -227,7 +227,7 @@ body {
         padding: 40px 20px;
     }
 
-    .carousel img {
+    .carousel-container img {
         width: 80%;
         margin-bottom: 15px;
     }
@@ -241,6 +241,17 @@ body {
         width: 80%;
         padding: 12px 20px;
     }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .social-icons {
+        position: static;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -250,15 +261,6 @@ body {
 
     .hero p {
         font-size: 0.9em;
-    }
-
-    .navbar {
-        padding: 10px;
-    }
-
-    .navbar a {
-        font-size: 0.9em;
-        margin: 5px 0;
     }
 
     .botao-inscricao {
@@ -274,12 +276,10 @@ body {
     }
 
     .contact-button {
-        padding: 5px 5px;
+        padding: 10px 15px;
     }
 
     .footer {
         padding: 10px;
     }
-
- }
 }
