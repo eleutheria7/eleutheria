@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0d1b2a;
+    background-color: white;
     color: white;
     text-align: center;
 }
@@ -47,6 +47,7 @@ body {
 
 /* Hero */
 .hero {
+    background-color: #1a4915;
     padding: 100px 20px;
 }
 
@@ -121,8 +122,10 @@ body {
 .countdown {
     display: flex;
     justify-content: center;
-    background-color: #0a0e17;
+    background-color: #af3232;
     padding: 20px 0;
+    border-top: black solid;
+    border-bottom: black solid;
 }
 
 .countdown div {
@@ -138,9 +141,20 @@ body {
 
 /* Seção Sobre */
 .sobre {
-    background-color: #eee1d5;
-    padding: 50px 20px;
+    background-color: white;
+    padding: 5px 5px;
     color: black;
+    width: 550px;
+    height: auto; 
+    text-align: justify;
+    text-indent: 0px;
+    margin: auto;
+    border-bottom: black solid;
+}
+
+.sobre-container {
+    background-color: white; /* Cor do fundo externo */
+    padding: 50px 0; /* Espaçamento superior e inferior */
 }
 
 .sobre h2 {
@@ -148,12 +162,6 @@ body {
     font-weight: bold;
 }
 
-.underline {
-    width: 50px;
-    height: 3px;
-    background-color: #c2185b;
-    margin: 10px auto;
-}
 
 /* Carousel */
 .carousel {
@@ -197,7 +205,7 @@ body {
     margin: 15px auto;
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #25d366;
+    background-color: #c71f1f;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -238,102 +246,3 @@ body {
     color: #25d366;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        margin: 10px 0;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    .botao-inscricao {
-        padding: 12px 25px;
-    }
-
-    .countdown div {
-        margin: 0 5px;
-    }
-
-    .countdown span {
-        font-size: 1.5em;
-    }
-
-    .sobre {
-        padding: 40px 20px;
-    }
-
-    .carousel-container img {
-        width: 80%;
-        margin-bottom: 15px;
-    }
-
-    .map-container {
-        width: 90%;
-        height: 300px;
-    }
-
-    .contact-button {
-        width: 80%;
-        padding: 12px 20px;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .social-icons {
-        position: static;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 0.9em;
-    }
-
-    .botao-inscricao {
-        padding: 10px 20px;
-    }
-
-    .countdown {
-        flex-direction: column;
-    }
-
-    .countdown div {
-        margin: 5px 0;
-    }
-
-    .contact-button {
-        padding: 10px 15px;
-    }
-
-    .footer {
-        padding: 10px;
-    }
-}
