@@ -57,3 +57,34 @@ window.onload = function () {
     const container = document.querySelector(".carousel-container");
     container.style.transform = `translateX(-${index * 100}%)`; // Inicializa a posição do carrossel
 };
+
+// 💬 Slider de Testemunhos
+let indexTestemunho = 0;
+const testemunhoContainer = document.getElementById("testemunhoContainer");
+const prevButton = document.getElementById("prevTestemunho");
+const nextButton = document.getElementById("nextTestemunho");
+
+function mudarTestemunho(direcao) {
+    const cards = document.querySelectorAll(".testemunho-card");
+    const totalCards = cards.length;
+    const cardWidth = cards[0].offsetWidth + 20; // largura + gap
+
+    indexTestemunho += direcao;
+
+    // Impede ultrapassar os limites
+    if (indexTestemunho < 0) {
+        indexTestemunho = 0;
+    } else if (indexTestemunho > totalCards - 3) {
+        indexTestemunho = totalCards - 3;
+    }
+
+    // Atualiza a posição do container
+    testemunhoContainer.style.transform = `translateX(-${indexTestemunho * cardWidth}px)`;
+
+    // Controla a visibilidade das setas
+    prevButton.style.display = indexTestemunho > 0 ? "block" : "none";
+    nextButton.style.display = indexTestemunho < totalCards - 3 ? "block" : "none";
+}
+
+// Exibe apenas a seta da direita no início
+nextButton.style.display = "block";

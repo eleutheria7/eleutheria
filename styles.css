@@ -5,16 +5,13 @@ body {
     background-color: #0d1b2a;
     color: white;
     text-align: center;
-    width: 100%;
-    overflow-x: hidden; /* Impede a rolagem horizontal */
 }
 
 .container {
-    width: 100%; /* Garante que o container ocupe 100% da tela */
-    max-width: 100%; /* Limita a largura para 100% */
+    width: 80%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box; /* Garante que o padding não sobrecarregue a largura */
 }
 
 /* Navbar */
@@ -24,14 +21,20 @@ body {
     align-items: center;
     padding: 20px;
     background-color: white;
-    width: 100%; /* Garante que a navbar ocupe 100% da tela */
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar a:not(:last-child)::after {
+    content: " | ";
+    color: black; /* Cor do separador */
+    margin-left: 10px;
 }
 
 .inscricao-button {
@@ -45,7 +48,6 @@ body {
 /* Hero */
 .hero {
     padding: 100px 20px;
-    width: 100%; /* Garante que a seção hero ocupe 100% da tela */
 }
 
 .hero h1 {
@@ -57,16 +59,63 @@ body {
     font-size: 1.2em;
 }
 
-.botao-inscricao {
-    margin-top: 20px;
-    padding: 15px 30px;
-    border-radius: 25px;
-    background-color: white;
+/* Seção de Testemunhos */
+.testemunhos {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
     color: black;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
 }
+
+.testemunhos h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.testemunho-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Card de Testemunho */
+.testemunho-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testemunho-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Foto do Testemunho */
+.testemunho-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Nome do Testemunho */
+.testemunho-nome {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto do Testemunho */
+.testemunho-texto {
+    font-size: 1em;
+    color: #555;
+}
+
 
 /* Contagem regressiva */
 .countdown {
@@ -74,7 +123,6 @@ body {
     justify-content: center;
     background-color: #0a0e17;
     padding: 20px 0;
-    width: 100%; /* Garante que a contagem ocupando 100% da tela */
 }
 
 .countdown div {
@@ -93,7 +141,6 @@ body {
     background-color: #eee1d5;
     padding: 50px 20px;
     color: black;
-    width: 100%;
 }
 
 .sobre h2 {
@@ -130,7 +177,8 @@ body {
 
 /* Mapa */
 .map-container {
-    width: 100%; /* Ajusta o mapa para ocupar 100% da tela */
+    width: 90vw;
+    max-width: 1200px;
     height: 400px;
     margin: 20px auto;
     border-radius: 8px;
@@ -165,7 +213,6 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 100%; /* Garante que o rodapé ocupe 100% da tela */
 }
 
 .footer p {
@@ -194,19 +241,16 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Garantir que a largura da container seja 100% */
-        padding: 10px;
+        width: 95%;
     }
 
     .navbar {
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
-        width: 100%; /* Garante que a navbar ocupe toda a largura */
     }
 
     .navbar a {
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
     .hero {
@@ -225,13 +269,8 @@ body {
         padding: 12px 25px;
     }
 
-    .countdown {
-        flex-direction: column;
-        width: 100%;
-    }
-
     .countdown div {
-        margin: 5px 0;
+        margin: 0 5px;
     }
 
     .countdown span {
@@ -248,19 +287,19 @@ body {
     }
 
     .map-container {
-        width: 100%;
+        width: 90%;
         height: 300px;
     }
 
     .contact-button {
-        width: 100%;
+        width: 80%;
         padding: 12px 20px;
     }
 
     .footer {
         flex-direction: column;
         text-align: center;
-        padding: 15px 0;
+        padding: 15px;
     }
 
     .social-icons {
