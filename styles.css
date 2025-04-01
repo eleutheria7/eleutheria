@@ -5,13 +5,16 @@ body {
     background-color: #0d1b2a;
     color: white;
     text-align: center;
+    width: 100%;
+    overflow-x: hidden; /* Impede a rolagem horizontal */
 }
 
 .container {
-    width: 100%; /* Garantir que a container ocupe 100% da largura */
-    max-width: 1000px;
+    width: 100%; /* Garante que o container ocupe 100% da tela */
+    max-width: 100%; /* Limita a largura para 100% */
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não sobrecarregue a largura */
 }
 
 /* Navbar */
@@ -21,6 +24,7 @@ body {
     align-items: center;
     padding: 20px;
     background-color: white;
+    width: 100%; /* Garante que a navbar ocupe 100% da tela */
 }
 
 .navbar a {
@@ -41,6 +45,7 @@ body {
 /* Hero */
 .hero {
     padding: 100px 20px;
+    width: 100%; /* Garante que a seção hero ocupe 100% da tela */
 }
 
 .hero h1 {
@@ -69,6 +74,7 @@ body {
     justify-content: center;
     background-color: #0a0e17;
     padding: 20px 0;
+    width: 100%; /* Garante que a contagem ocupando 100% da tela */
 }
 
 .countdown div {
@@ -87,6 +93,7 @@ body {
     background-color: #eee1d5;
     padding: 50px 20px;
     color: black;
+    width: 100%;
 }
 
 .sobre h2 {
@@ -123,7 +130,7 @@ body {
 
 /* Mapa */
 .map-container {
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 100%; /* Ajusta o mapa para ocupar 100% da tela */
     height: 400px;
     margin: 20px auto;
     border-radius: 8px;
@@ -158,6 +165,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%; /* Garante que o rodapé ocupe 100% da tela */
 }
 
 .footer p {
@@ -186,18 +194,19 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Ocupa toda a largura possível */
+        width: 100%; /* Garantir que a largura da container seja 100% */
         padding: 10px;
     }
 
     .navbar {
-        flex-direction: column; /* Organiza os itens da navbar em coluna */
-        align-items: center; /* Centraliza os itens */
-        padding: 10px 0; /* Ajusta o padding */
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%; /* Garante que a navbar ocupe toda a largura */
     }
 
     .navbar a {
-        margin: 5px 0; /* Reduz a margem entre os links */
+        margin: 5px 0;
     }
 
     .hero {
@@ -205,7 +214,7 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5em; /* Ajusta o tamanho do título no mobile */
+        font-size: 2.5em;
     }
 
     .hero p {
@@ -218,6 +227,7 @@ body {
 
     .countdown {
         flex-direction: column;
+        width: 100%;
     }
 
     .countdown div {
@@ -233,40 +243,39 @@ body {
     }
 
     .carousel-container img {
-        width: 80%; /* Ajusta a largura da imagem do carousel */
+        width: 80%;
         margin-bottom: 15px;
     }
 
     .map-container {
-        width: 100%; /* Ajusta o mapa para ocupar toda a largura disponível */
+        width: 100%;
         height: 300px;
     }
 
     .contact-button {
-        width: 100%; /* Botão ocupa a largura total */
+        width: 100%;
         padding: 12px 20px;
     }
 
     .footer {
-        flex-direction: column; /* Organiza os itens do rodapé em coluna */
+        flex-direction: column;
         text-align: center;
         padding: 15px 0;
     }
 
     .social-icons {
-        position: static; /* Ajusta o posicionamento dos ícones no mobile */
+        position: static;
         margin-top: 10px;
-        gap: 15px; /* Ajusta o espaçamento entre os ícones */
     }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2em; /* Ajusta o tamanho do título no mobile */
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 0.9em; /* Ajusta o tamanho do texto */
+        font-size: 0.9em;
     }
 
     .botao-inscricao {
