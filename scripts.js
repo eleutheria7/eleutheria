@@ -58,33 +58,24 @@ window.onload = function () {
     container.style.transform = `translateX(-${index * 100}%)`; // Inicializa a posição do carrossel
 };
 
-// 💬 Slider de Testemunhos
-let indexTestemunho = 0;
-const testemunhoContainer = document.getElementById("testemunhoContainer");
-const prevButton = document.getElementById("prevTestemunho");
-const nextButton = document.getElementById("nextTestemunho");
+//  Slider de Testemunhos
+let currentIndex = 0;
 
-function mudarTestemunho(direcao) {
-    const cards = document.querySelectorAll(".testemunho-card");
-    const totalCards = cards.length;
-    const cardWidth = cards[0].offsetWidth + 20; // largura + gap
+function scrollTestemunhos(direction) {
+    const container = document.querySelector(".testemunho-wrapper");
+    const cardWidth = document.querySelector(".testemunho-card").offsetWidth + 20; // Inclui espaço entre os cards
+    const visibleCards = 3; // Número de cards visíveis por vez
+    const totalCards = document.querySelectorAll(".testemunho-card").length;
+    const maxIndex = Math.ceil(totalCards / visibleCards) - 1; // Total de "páginas"
 
-    indexTestemunho += direcao;
+    currentIndex += direction;
 
-    // Impede ultrapassar os limites
-    if (indexTestemunho < 0) {
-        indexTestemunho = 0;
-    } else if (indexTestemunho > totalCards - 3) {
-        indexTestemunho = totalCards - 3;
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
     }
 
-    // Atualiza a posição do container
-    testemunhoContainer.style.transform = `translateX(-${indexTestemunho * cardWidth}px)`;
-
-    // Controla a visibilidade das setas
-    prevButton.style.display = indexTestemunho > 0 ? "block" : "none";
-    nextButton.style.display = indexTestemunho < totalCards - 3 ? "block" : "none";
+    container.style.transform = `translateX(-${currentIndex * (cardWidth * visibleCards)}px)`;
 }
 
-// Exibe apenas a seta da direita no início
-nextButton.style.display = "block";
