@@ -29,33 +29,27 @@ const imagens = document.querySelectorAll(".carousel img");
 const totalImagens = imagens.length;
 
 function mudarImagem(direcao) {
-    // Remover a classe active da imagem atual
+
     imagens[index].classList.remove("active");
 
-    // Atualizar o índice com base na direção
     index = (index + direcao + totalImagens) % totalImagens;
 
-    // Se chegar à imagem 7, volta para a imagem 1
     if (index === 7) {
         index = 0;
     }
 
-    // Adicionar a classe active à nova imagem
     imagens[index].classList.add("active");
 
-    // Ajustar o carrossel para mover as imagens
     const container = document.querySelector(".carousel-container");
-    container.style.transform = `translateX(-${index * 100}%)`; // Movendo o carrossel
+    container.style.transform = `translateX(-${index * 100}%)`; 
 }
 
-// Navegação automática (opcional)
 setInterval(() => mudarImagem(1), 3000);
 
-// Função para iniciar o carrossel
 window.onload = function () {
     imagens[index].classList.add("active");
     const container = document.querySelector(".carousel-container");
-    container.style.transform = `translateX(-${index * 100}%)`; // Inicializa a posição do carrossel
+    container.style.transform = `translateX(-${index * 100}%)`; 
 };
 
 //  Slider de Testemunhos
@@ -63,10 +57,10 @@ let currentIndex = 0;
 
 function scrollTestemunhos(direction) {
     const container = document.querySelector(".testemunho-wrapper");
-    const cardWidth = document.querySelector(".testemunho-card").offsetWidth + 20; // Inclui espaço entre os cards
-    const visibleCards = 3; // Número de cards visíveis por vez
+    const cardWidth = document.querySelector(".testemunho-card").offsetWidth + 20; 
+    const visibleCards = 3; 
     const totalCards = document.querySelectorAll(".testemunho-card").length;
-    const maxIndex = Math.ceil(totalCards / visibleCards) - 1; // Total de "páginas"
+    const maxIndex = Math.ceil(totalCards / visibleCards) - 1; 
 
     currentIndex += direction;
 

@@ -22,6 +22,7 @@ body {
     align-items: center;
     padding: 20px;
     background-color: white;
+    
 }
 
 .navbar a {
@@ -271,10 +272,12 @@ body {
     background-color: #f7f7f7; /* Cor de fundo (pode ser alterada) */
     padding-top: 10px; /* Espaçamento ao redor do carrossel */
     padding-bottom: 60px;
-    border-radius: 10px; /* Bordas arredondadas */
     display: flex;
     justify-content: center; /* Centraliza o carrossel dentro do fundo */
     margin-top: 20px;
+    border-width: 10px;
+    border-bottom: black solid;
+    border-top: black solid;
 }
 
 /* Carousel */
