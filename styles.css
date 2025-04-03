@@ -50,7 +50,7 @@ body {
 /* Hero */
 .hero {
     position: relative;
-    background-color: #272727;
+    background-color: #0d3515;
     background-image: url('./home/cabeçalho.jpg');
     background-size: cover;
     background-position: center;
@@ -375,7 +375,7 @@ body {
 
 /* Rodapé */
 .footer {
-    background-color: #222;
+    background-color: #08220d;
     padding: 20px;
     color: white;
     display: flex;
@@ -409,3 +409,22 @@ body {
     color: #25d366;
 }
 
+.social-icon-facebook{
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icon-facebook:hover{
+    color: blue;
+}
+
+.social-icon-instagram{
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icon-instagram:hover{
+    color: rgb(192, 88, 192);
+}

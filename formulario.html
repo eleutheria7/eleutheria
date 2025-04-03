@@ -9,28 +9,41 @@
 <body>
 
     <div class="container">
+        <h1>ELEUTHERIA 2025</h1>
+        <p><strong>“Eis a vontade de Deus: A vossa Santificação”</strong></p>
+        <p><em>I Tessalonicenses 4, 3</em></p>
+        <div class="info">
+            <p><strong>Data:</strong> 20, 21 e 22 de Junho/2025</p>
+            <p><strong>Música Tema:</strong> Eis-me aqui– Colo de Deus</p>
+            <p><strong>Local:</strong> Centro de Formação Religioso – Luiza G. Freguglia</p>
+            <p><strong>Cidade:</strong> Santa Bárbara d’Oeste</p>
+            <p><strong>Saída:</strong> 20/06/2025 às 19h00 - Paróquia Santa Luzia</p>
+            <p><strong>Retorno:</strong> 22/06/2025 às 17h30, saída de Santa Bárbara d’Oeste</p>
+            <p><strong>Faixa etária:</strong> 14 a 30 anos</p>
+            <p><strong>Valor:</strong> 1º Lote até 15/05, R$ 100</p>
+        </div>
         <h2>Preencha o formulário abaixo</h2>
         
         <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSde4P_3rOrXZembrQToUQKjCPJH8TDyGiC6sI1U9ln8A_pYug/formResponse" method="POST" target="_blank">
             
             <div class="form-group">
-                <label for="nome_completo">Deus te chama pelo nome, qual é o seu? (Nome completo):</label>
+                <label for="nome_completo" class="required">Deus te chama pelo nome, qual é o seu? (Nome completo):</label>
                 <input type="text" id="nome_completo" name="entry.1200995469" required>
             </div>
 
             <div class="form-group">
-                <label for="rg">RG:</label>
+                <label for="rg" class="required">RG:</label>
                 <input type="text" id="rg" name="entry.1085126047" required>
             </div>
 
             <div class="form-group">
-                <label for="data_nascimento">Data de Nascimento:</label>
+                <label for="data_nascimento" class="required">Data de Nascimento:</label>
                 <input type="date" id="data_nascimento" name="entry.371421258" required>
             </div>
 
             <div class="form-group">
-                <label>Sexo:</label>
-                <div class="radio-group">
+                <label class="required">Sexo:</label>
+                <div class="radio-group" >
                     <input type="radio" id="sexo_masculino" name="entry.1169466424" value="Masculino" required>
                     <label for="sexo_masculino">Masculino</label>
                     
@@ -40,27 +53,27 @@
             </div>
 
             <div class="form-group">
-                <label for="whatsapp">WhatsApp:</label>
+                <label for="whatsapp" class="required">WhatsApp:</label>
                 <input type="text" id="whatsapp" name="entry.2023705290" required>
             </div>
 
             <div class="form-group">
-                <label for="whatsapp_responsavel">WhatsApp de um responsável:</label>
+                <label for="whatsapp_responsavel" class="required">WhatsApp de um responsável:</label>
                 <input type="text" id="whatsapp_responsavel" name="entry.1332037287">
             </div>
 
             <div class="form-group">
-                <label for="endereco">Endereço completo:</label>
+                <label for="endereco" class="required">Endereço completo:</label>
                 <input type="text" id="endereco" name="entry.1695777063" required>
             </div>
 
             <div class="form-group">
-                <label for="religiao">Religião (se tiver):</label>
+                <label for="religiao" class="required">Religião (se tiver):</label>
                 <input type="text" id="religiao" name="entry.422906873">
             </div>
 
             <div class="form-group">
-                <label>Quais Sacramentos possui?</label>
+                <label class="required">Quais Sacramentos possui?</label>
                 <div class="checkbox-group">
                     <input type="checkbox" id="sacramentos_batismo" name="entry.319303028" value="Batismo">
                     <label for="sacramentos_batismo">Batismo</label>
@@ -80,12 +93,12 @@
             </div>
 
             <div class="form-group">
-                <label for="paroquia">Paróquia/Comunidade:</label>
+                <label for="paroquia" class="required">Paróquia/Comunidade:</label>
                 <input type="text" id="paroquia" name="entry.136460630">
             </div>
 
             <div class="form-group">
-                <label for="estado_civil">Estado Civil:</label>
+                <label for="estado_civil" class="required">Estado Civil:</label>
                 <select id="estado_civil" name="entry.1830455896" required>
                     <option value="Solteiro">Solteiro</option>
                     <option value="Casado">Casado</option>
@@ -96,22 +109,22 @@
             </div>
 
             <div class="form-group">
-                <label for="doenca">Possui alguma doença crônica?</label>
+                <label for="doenca" class="required">Possui alguma doença crônica?</label>
                 <input type="text" id="doenca" name="entry.408708581">
             </div>
 
             <div class="form-group">
-                <label for="alergia">Possui alguma alergia?</label>
+                <label for="alergia" class="required">Possui alguma alergia?</label>
                 <input type="text" id="alergia" name="entry.849647125">
             </div>
 
             <div class="form-group">
-                <label for="medicamento">Faz uso de medicamento controlado?</label>
+                <label for="medicamento" class="required">Faz uso de medicamento controlado?</label>
                 <input type="text" id="medicamento" name="entry.1971679924">
             </div>
 
             <div class="form-group">
-                <label>Pode tomar analgésico?</label>
+                <label class="required">Pode tomar analgésico?</label>
                 <div class="radio-group">
                     <input type="radio" id="analgesico_sim" name="entry.439537850" value="Sim">
                     <label for="analgesico_sim">Sim</label>
@@ -122,17 +135,17 @@
             </div>
 
             <div class="form-group">
-                <label for="restricao">Outras restrições:</label>
+                <label for="restricao" class="required">Outras restrições:</label>
                 <input type="text" id="restricao" name="entry.1792122689">
             </div>
 
             <div class="form-group">
-                <label for="emergencia">Contato de emergência:</label>
+                <label for="emergencia" class="required">Contato de emergência:</label>
                 <input type="text" id="emergencia" name="entry.532155946" required>
             </div>
 
             <div class="form-group">
-                <label for="como_conheceu">Como conheceu o Eleutheria?</label>
+                <label for="como_conheceu" class="required">Como conheceu o Eleutheria?</label>
                 <select id="como_conheceu" name="entry.1918424104" required>
                     <option value="Instagram">Instagram</option>
                     <option value="Convite de amigo">Convite de amigo</option>
@@ -143,7 +156,7 @@
             </div>
 
             <div class="form-group">
-                <label>Autoriza o uso de imagem?</label>
+                <label class="required">Autoriza o uso de imagem?</label>
                 <div class="radio-group">
                     <input type="radio" id="imagem_sim" name="entry.341597136" value="Sim, a comunicação pode tirar fotos e vídeos meus e publicar nas mídias sociais." required>
                     <label for="imagem_sim">Sim</label>
