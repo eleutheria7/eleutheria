@@ -49,18 +49,46 @@ body {
 
 /* Hero */
 .hero {
+    position: relative;
     background-color: #272727;
+    background-image: url('./home/cabeçalho.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 100px 20px;
     color: white;
+    z-index: 2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sobreposição escura */
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 3em;
     font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2{
+    color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .hero p {
     font-size: 1.2em;
+    color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .botao-inscricao {
@@ -72,6 +100,8 @@ body {
     font-weight: bold;
     border: none;
     text-decoration: none;
+    position: relative;
+    z-index: 2;
 }
 
 /* Seção de Testemunhos */
