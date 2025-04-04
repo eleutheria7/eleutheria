@@ -416,7 +416,7 @@ body {
 }
 
 .social-icon-facebook:hover{
-    color: blue;
+    color: rgb(0, 102, 255);
 }
 
 .social-icon-instagram{
@@ -427,4 +427,138 @@ body {
 
 .social-icon-instagram:hover{
     color: rgb(192, 88, 192);
+}
+
+/* Responsivo para mobile e tablet */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar a:not(:last-child)::after {
+        content: "";
+        margin-left: 0;
+    }
+
+    .inscricao-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 60px 10px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .testemunho-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testemunho-card {
+        flex: 1 0 100%;
+        max-width: 90%;
+        margin: 10px 0;
+        min-height: 300px;
+    }
+
+    .seta {
+        display: none; /* Esconde setas em dispositivos menores */
+    }
+
+    .sobre {
+        width: 90%;
+        padding: 20px 10px;
+    }
+
+    .sobre-container::before,
+    .sobre-container::after {
+        display: none;
+    }
+
+    .carousel-container img {
+        width: 100%; /* Mostra uma imagem por vez */
+    }
+
+    .map-container {
+        width: 90vw;
+        height: 300px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .social-icons {
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .video-container {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        .testemunho-card {
+            width: 90%; 
+            max-width: 400px; 
+            padding: 20px;
+            min-height: 350px; 
+        }
+    
+        .testemunho-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover; 
+            border-radius: 50%; 
+        }
+
+        .carousel-container {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; /* Suporte para iOS */
+        }
+        
+        .testemunho-card {
+            scroll-snap-align: center;
+            flex: 0 0 80%; /* Garante que cada card ocupe 80% da tela */
+            max-width: 80%;
+            box-sizing: border-box;
+        }
+        
+        .seta {
+            display: none;
+        }
+    }
 }
