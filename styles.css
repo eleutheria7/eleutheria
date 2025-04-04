@@ -443,7 +443,8 @@ body {
     }
 
     .navbar a:not(:last-child)::after {
-        content: "";
+        content: " | ";
+        color: black; /* Cor do separador */
         margin-left: 0;
     }
 
@@ -476,6 +477,14 @@ body {
         margin: 10px 0;
         min-height: 300px;
     }
+    .testemunho-texto {
+        font-size: 1em;
+        color: #000000;
+        text-align: justify;
+        word-break: break-word; /* quebra palavras muito grandes */
+        overflow-wrap: break-word; /* compatibilidade extra */
+        margin: 0; /* remove margens que possam ultrapassar */
+      }
 
     .seta {
         display: none; /* Esconde setas em dispositivos menores */
@@ -526,39 +535,69 @@ body {
     }
 
     @media (max-width: 768px) {
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            width: 100vw;
+            padding: 10px 0; /* Remove padding lateral */
+            box-sizing: border-box;
+            scroll-padding-left: 0; /* Garante que o primeiro card comece do lado esquerdo */
+            gap: 0; /* Remove espaçamento entre os cards */
+        }
+    
         .testemunho-card {
-            width: 90%; 
-            max-width: 400px; 
+            flex: 0 0 80%;
+            min-width: 80%;
+            max-width: 400px;
             padding: 20px;
-            min-height: 350px; 
+            box-sizing: border-box;
+            scroll-snap-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden; /* Garante que nada ultrapasse */
+            height: auto; /* Permite crescimento conforme o conteúdo */
+        }
+    
+        /* Garante que o primeiro card fique colado no início */
+        .testemunho-card:first-child {
+            margin-left: 0 !important;
         }
     
         .testemunho-card img {
             width: 80px;
             height: 80px;
-            object-fit: cover; 
-            border-radius: 50%; 
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
-
-        .carousel-container {
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            display: flex;
-            gap: 20px;
-            padding: 10px;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch; /* Suporte para iOS */
+    
+        .testemunho-texto {
+            font-size: 1em;
+            color: #000;
+            text-align: justify;
+            word-break: break-word; /* Garante quebra de palavra */
+            overflow-wrap: break-word; /* Evita estouro lateral */
+            white-space: normal; /* Permite múltiplas linhas */
+            width: 90%; /* Mantém o texto dentro do card */
+            max-width: 50%; /* Evita ultrapassar as bordas */
+            padding: 10px; /* Dá espaço interno */
+            line-height: 1.5; /* Melhora a legibilidade */
+            overflow: hidden; /* Impede que o texto transborde */
+            margin-left: 7%;
+            
         }
-        
-        .testemunho-card {
-            scroll-snap-align: center;
-            flex: 0 0 80%; /* Garante que cada card ocupe 80% da tela */
-            max-width: 80%;
-            box-sizing: border-box;
-        }
-        
+    
         .seta {
             display: none;
         }
     }
-}
+    
+}    
